@@ -1,5 +1,7 @@
+from typing import List, Any
 class StatisticalAnalyzer:
-    def __init__(self, numbers: List[Any]):
+    def __init__(self, numbers: 
+                 List[Any]):
         self.numbers = numbers
 
     def validate_input(self) -> None:
@@ -42,17 +44,17 @@ class StatisticalAnalyzer:
             return modes[0]
         return sorted(modes)
 
-    def find_minimum(self) -> Number:
+    def find_minimum(self) -> float:
         return min(self.numbers)
 
-    def find_maximum(self) -> Number:
+    def find_maximum(self) -> float:
         return max(self.numbers)
 
     def count_unique_values(self) -> int:
         return len(set(self.numbers))
 
     # Bonus methods
-    def calculate_range(self) -> Number:
+    def calculate_range(self) -> float:
         return self.find_maximum() - self.find_minimum()
 
     def calculate_variance(self) -> float:
