@@ -19,6 +19,14 @@ class Settings(BaseSettings):
     ENVIRONMENT: str="development"
 
     HOST: str="127.0.0.1"
+    PORT: int=8000
+    DEFAULT_MODEL: str="llama3"
+
+    TEMPERATURE: float=0.2
+
+    DATABASE_URL: str="postgresql://postgres:password@localhost:5432/ai_business_os"
+
+    LOG_LEVEL: str="INFO"
     
 
 @lru_cache
